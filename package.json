@@ -1,0 +1,26 @@
+{
+  "name": "mmm-chaoticwaterwheel",
+  "version": "1.0.0",
+  "description": "MagicMirror² module: Malkus's chaotic waterwheel, leaking cups that turn it one way then the other, whose equations are Lorenz's; the butterfly drawn beside it, for a Raspberry Pi without a GPU.",
+  "main": "MMM-ChaoticWaterwheel.js",
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [
+    "MagicMirror",
+    "chaos",
+    "chaos theory",
+    "Lorenz attractor",
+    "waterwheel",
+    "Malkus",
+    "strange attractor",
+    "physics",
+    "animation"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/charleswest775/MMM-ChaoticWaterwheel.git"
+  },
+  "author": "Charles West",
+  "license": "MIT"
+}
