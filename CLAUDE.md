@@ -2,7 +2,7 @@
 
 Charles's MagicMirror² module: Malkus's chaotic waterwheel (leaking cups under a spray, reversing at random) with the Lorenz butterfly it traces, for his hallway mirror, as one page in a
 rotation of pages. Made on 2026-09-29, one of five new pages (with MMM-StandardMap, MMM-DoubleSlit, MMM-Sandpile, MMM-Harmonograph),
-with the same shell as its siblings.
+with the same shell as its siblings. On the mirror since 2026-09-30.
 
 ## Files
 
@@ -33,7 +33,7 @@ spirit with the sibling modules (MMM-ChaosTheory, MMM-LorenzAttractor, MMM-Doubl
 
 ## Cost on the Pi
 
-Not measured yet. Expected about half a core: a ~1/4-canvas box at 10 fps plus a small trace box at 10 fps. Measure before relying on it.
+Measured on the Pi, 2026-09-30 (900², 20 fps, Electron + cage over a 45 s page): 71% of a core; hidden 0.2%. The dearest of the five; it never rests.
 
 ## Performance findings on the Pi (measured)
 

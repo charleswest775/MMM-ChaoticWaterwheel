@@ -127,10 +127,20 @@ times, as Lorenz's rate says; and that no cup ever overflows.
 
 ## Performance
 
-Not yet measured on the Pi. What it's designed to cost: the frames alternate between redrawing
-the wheel's box (about a quarter of a 900² canvas; the spray above it is drawn once) and adding the butterfly's newest stretch (a
-small box), so the wheel moves at 10 fps and the trace grows at 10 fps, and no frame's changes
-span both. Expect something like half a core, mostly the fixed cost of 20 changed frames a second; the physics takes well under a millisecond a frame.
+Measured on a Raspberry Pi 3 B+ (Electron 42, software rendering), 900×900 at 20 fps, as CPU of
+the Electron processes plus the `cage` compositor, in % of one core (the Pi has four), traced a
+quarter of a second at a time over a 45 s page; the mirror between pages: 0.2%.
+
+| | % of one core |
+|---|---|
+| module **hidden** (e.g. another MMM-pages page) | 0.2 |
+| over a 45 s showing | 71 |
+
+The frames alternate between redrawing the wheel's box (about a quarter of the canvas; the spray
+above it is drawn once) and adding the butterfly's newest stretch (a small box), so the wheel
+moves at 10 fps and the trace grows at 10 fps, and no frame's changes span both. It never rests:
+the wheel keeps turning as long as it is shown. For less, lower `fps` (the wheel then moves at
+half of it).
 
 Why it is drawn this way, from micro-benchmarks on the Pi:
 
